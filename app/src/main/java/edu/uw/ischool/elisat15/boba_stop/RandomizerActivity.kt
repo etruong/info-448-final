@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 
 
 class RandomizerActivity : AppCompatActivity() {
@@ -21,6 +22,7 @@ class RandomizerActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         val fragment = BobaDeciderHome()
+
         fragmentTransaction.add(R.id.randomizer_activity, fragment)
         fragmentTransaction.commit()
     }
