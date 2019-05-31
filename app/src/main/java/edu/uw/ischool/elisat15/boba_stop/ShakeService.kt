@@ -12,6 +12,10 @@ import android.util.Log
 
 class ShakeService : Service(), SensorEventListener {
 
+    override fun onBind(intent: Intent?): IBinder? {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     var xAccel: Float = 0.0F
     var yAccel: Float = 0.0F
     var zAccel: Float = 0.0F
@@ -34,7 +38,6 @@ class ShakeService : Service(), SensorEventListener {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         accelerator = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
         sensorManager.registerListener(this, accelerator, SensorManager.SENSOR_DELAY_NORMAL)
-
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
@@ -95,10 +98,6 @@ class ShakeService : Service(), SensorEventListener {
         yAccel = yNewAccel
         zAccel = zNewAccel
 
-    }
-
-    override fun onBind(intent: Intent?): IBinder? {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
 }
