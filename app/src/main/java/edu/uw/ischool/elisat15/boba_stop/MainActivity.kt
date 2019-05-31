@@ -20,14 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         val decideButton = findViewById<Button>(R.id.decide_button)
         val businessInput = findViewById<EditText>(R.id.name_input)
-
-        val shakeService = Intent(this, ShakeService::class.java)
+        
         val myIntent = Intent(this, RandomizerActivity::class.java)
 
         decideButton.setOnClickListener {
             myIntent.putExtra("bobaStop", businessInput.text.toString())
             BobaDataManager.instance.dataManager.currentBobaStop = businessInput.text.toString()
-            startService(shakeService)
             startActivity(myIntent)
         }
     }
