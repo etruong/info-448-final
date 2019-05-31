@@ -10,10 +10,28 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="Boba Stop"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" app:fontFamily="@font/caveat" android:textSize="36sp"
+            app:layout_constraintVertical_bias="0.325" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textView9"/>
+    <Button
+            android:text="Decide for me!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="396dp"
+            android:id="@+id/decide_button"
+            style="@style/Widget.AppCompat.Button.Colored" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/name_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/decide_button" android:inputType="text"
+            android:hint="Insert Boba Stop Name Here"/>
 
 </android.support.constraint.ConstraintLayout>

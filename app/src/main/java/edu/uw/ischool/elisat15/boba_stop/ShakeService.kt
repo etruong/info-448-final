@@ -22,7 +22,7 @@ class ShakeService : Service(), SensorEventListener {
 
     var firstUpdate: Boolean = true
     var shakeInitiated: Boolean = false
-    var shakeThreshold: Float = 0.5F // difference btwn acceleration
+    var shakeThreshold: Float = 2.5F // difference btwn acceleration
 
     lateinit var sensorManager: SensorManager
     lateinit var accelerator: Sensor
@@ -63,7 +63,7 @@ class ShakeService : Service(), SensorEventListener {
         val deltaY = Math.abs(yPrevAccel - yAccel)
         val deltaZ = Math.abs(zPrevAccel - zAccel)
 
-        Log.v("service", "threshold: ${shakeThreshold} delta-x: ${deltaX} delta-y: ${deltaY} delta-z: ${deltaZ}")
+//        Log.v("service", "threshold: ${shakeThreshold} delta-x: ${deltaX} delta-y: ${deltaY} delta-z: ${deltaZ}")
 
         return (deltaX > shakeThreshold && deltaY > shakeThreshold) ||
                 (deltaX > shakeThreshold && deltaZ > shakeThreshold) ||
@@ -73,9 +73,9 @@ class ShakeService : Service(), SensorEventListener {
 
     private fun executeShakeAction() {
         Log.v("service", "executing shake action")
-        val ii = Intent(this, RandomizerActivity::class.java)
-        ii.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(ii)
+//        val ii = Intent(this, RandomizerActivity::class.java)
+//        ii.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+//        startActivity(ii)
     }
 
     private fun updateAccelParameter(xNewAccel: Float, yNewAccel: Float, zNewAccel: Float) {

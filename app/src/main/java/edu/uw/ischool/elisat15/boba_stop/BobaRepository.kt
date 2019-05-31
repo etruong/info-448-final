@@ -12,6 +12,17 @@ class BobaRepository {
 
     val bobaData: ArrayList<BobaStop> = arrayListOf()
     lateinit var currentLocation: String
+    lateinit var currentBobaStop: String
+
+    fun returnBobaStop(name: String): BobaStop? {
+        for(num in 0 until bobaData.size) {
+            val bobaStop = bobaData.get(num)
+            if (bobaStop.name == name) {
+                return bobaStop
+            }
+        }
+        return null
+    }
 
     fun updateData(context: Context) {
         val jsonString: String? = try {

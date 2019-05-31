@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".BobaDeciderResultFragment">
+    <TextView
+            android:text="Boba Stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" app:fontFamily="@font/caveat" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="156dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/company_header2" app:layout_constraintVertical_bias="0.0"/>
+    <TextView
+            android:text="Insert Company Name"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:id="@+id/company_header2" app:fontFamily="@font/amiko"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="192dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4" app:layout_constraintVertical_bias="0.03"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="You should get..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8" android:textStyle="bold"
+            app:fontFamily="@font/amiko" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.498" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="68dp" app:layout_constraintTop_toBottomOf="@+id/company_header2"/>
+    <TextView
+            android:text="Results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/decider_result" app:fontFamily="@font/caveat"
+            android:textSize="40sp" android:textColor="@color/colorAccent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="14dp" app:layout_constraintTop_toBottomOf="@+id/textView8"/>
+    <Button
+            android:text="Shake Again?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shake_again"
+            style="@style/Widget.AppCompat.Button.Colored" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="68dp" app:layout_constraintTop_toBottomOf="@+id/decider_result"/>
+</android.support.constraint.ConstraintLayout>

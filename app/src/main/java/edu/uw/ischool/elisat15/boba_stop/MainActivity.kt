@@ -4,7 +4,8 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-
+import android.widget.Button
+import android.widget.EditText
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,17 @@ class MainActivity : AppCompatActivity() {
 
         Log.v(TAG, BobaDataManager.instance.dataManager.bobaData.toString())
 
-//        val myIntent = Intent(this, ShakeService::class.java)
-//        startService(myIntent)
+        val decideButton = findViewById<Button>(R.id.decide_button)
+        val businessInput = findViewById<EditText>(R.id.name_input)
+
+        val shakeService = Intent(this, ShakeService::class.java)
+        val myIntent = Intent(this, RandomizerActivity::class.java)
+
+        decideButton.setOnClickListener {
+            myIntent.putExtra("bobaStop", businessInput.text.toString())
+            BobaDataManager.instance.dataManager.currentBobaStop = businessInput.text.toString()
+            startService(shakeService)
+            startActivity(myIntent)
+        }
     }
 }
