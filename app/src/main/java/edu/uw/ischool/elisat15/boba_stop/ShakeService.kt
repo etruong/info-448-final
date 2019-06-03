@@ -76,6 +76,8 @@ class ShakeService : Service(), SensorEventListener {
 
     private fun executeShakeAction() {
         Log.v("service", "executing shake action")
+        
+        stopSelf()
 //        val ii = Intent(this, RandomizerActivity::class.java)
 //        ii.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 //        startActivity(ii)

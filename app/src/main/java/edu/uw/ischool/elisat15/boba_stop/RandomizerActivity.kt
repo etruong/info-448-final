@@ -20,7 +20,10 @@ class RandomizerActivity : AppCompatActivity() {
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
+        val bundle = Bundle()
+        bundle.putString("bobaStop", intent.getStringExtra("bobaStop"))
         val fragment = BobaDeciderHome()
+        fragment.arguments = bundle
         fragmentTransaction.add(R.id.randomizer_activity, fragment)
         fragmentTransaction.commit()
     }
