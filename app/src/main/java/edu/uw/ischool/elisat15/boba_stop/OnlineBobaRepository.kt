@@ -18,7 +18,7 @@ class OnlineBobaRepository {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // Get Post object and use the values to update the UI
                 val post = dataSnapshot.value
-                Log.v(TAG, )
+//                Log.v(TAG, )
 
             }
 
