@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "591033410599",
+    "firebase_url": "https://boba-stop.firebaseio.com",
+    "project_id": "boba-stop",
+    "storage_bucket": "boba-stop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591033410599:android:07ae0f31aaa21fed",
+        "android_client_info": {
+          "package_name": "edu.uw.ischool.elisat15.boba_stop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591033410599-licaarlif1vsls9pq520j6vfclp0bdcc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjvCxx_Qg_BiedBvh0Jsne-B0kaBLPu-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591033410599-licaarlif1vsls9pq520j6vfclp0bdcc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

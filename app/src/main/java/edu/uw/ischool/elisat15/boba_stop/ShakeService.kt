@@ -1,6 +1,7 @@
 package edu.uw.ischool.elisat15.boba_stop
 
 import android.app.Service
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.hardware.Sensor
@@ -9,8 +10,18 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.IBinder
 import android.util.Log
+import android.support.v4.content.LocalBroadcastManager
+import android.os.Bundle
 
 class ShakeService : Service(), SensorEventListener {
+
+    private fun sendMessageToActivity() {
+        val intent = Intent("intentKey")
+        val extras = Bundle()
+        extras.putString("key", "hello")
+        intent.putExtras(extras)
+        this.sendBroadcast(intent)
+    }
 
     override fun onBind(intent: Intent?): IBinder? {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -26,7 +37,7 @@ class ShakeService : Service(), SensorEventListener {
 
     var firstUpdate: Boolean = true
     var shakeInitiated: Boolean = false
-    var shakeThreshold: Float = 2.5F // difference btwn acceleration
+    var shakeThreshold: Float = 1.5F // difference btwn acceleration
 
     lateinit var sensorManager: SensorManager
     lateinit var accelerator: Sensor
@@ -76,11 +87,8 @@ class ShakeService : Service(), SensorEventListener {
 
     private fun executeShakeAction() {
         Log.v("service", "executing shake action")
-        
-        stopSelf()
-//        val ii = Intent(this, RandomizerActivity::class.java)
-//        ii.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//        startActivity(ii)
+        sendMessageToActivity()
+        this.stopSelf()
     }
 
     private fun updateAccelParameter(xNewAccel: Float, yNewAccel: Float, zNewAccel: Float) {
@@ -100,6 +108,11 @@ class ShakeService : Service(), SensorEventListener {
         yAccel = yNewAccel
         zAccel = zNewAccel
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        this.stopSelf()
     }
 
 }

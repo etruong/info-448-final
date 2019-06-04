@@ -1,0 +1,3033 @@
+[
+    {"name":"Sharetea",
+    "self-serve": false,
+    "food": false,
+    "drinks":[
+        {
+          "category": "Fruit Tea",
+          "name": "Mango Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Grapefruit Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Honey Lemon with Aloe Vera",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Wintermelon with Lemon Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Strawberry Black Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Pineapple Green / Black Tea with Aiyu Jelly",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Hawaii Fruit Tea",
+          "reccommended": "TRUE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Kiwi Fruit Tea with Aiyu Jelly",
+          "reccommended": "TRUE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Mango & Passion Fruit Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Whole Lemon Black Tea / Green Tea",
+          "reccommended": "TRUE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Tea",
+          "name": "Passion Fruit, Orange & Grapefruit Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Brewed Tea",
+          "name": "Classic Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Brewed Tea",
+          "name": "Classic Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Brewed Tea",
+          "name": "Classic Oolong Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Brewed Tea",
+          "name": "Wintermelon Tea",
+          "reccommended": "TRUE",
+          "hot": "FALSE",
+          "non-caffeinated": "TRUE"
+        },
+        {
+          "category": "Brewed Tea",
+          "name": "Honey Black / Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Brewed Tea",
+          "name": "Ginger Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Creama",
+          "name": "Creama Tea ( Black / Green / Oolong Tea )",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Creama",
+          "name": "Wintermelon Tea Creama",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Creama",
+          "name": "Coffee Creama",
+          "reccommended": "TRUE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Creama",
+          "name": "Cocoa Creama",
+          "reccommended": "TRUE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Creama",
+          "name": "Mango Green Tea Creama",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Creama",
+          "name": "Matcha Green Tea Creama",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Milk",
+          "name": "Fresh Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Milk",
+          "name": "Wintermelon with Fresh Milk",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "TRUE"
+        },
+        {
+          "category": "Fresh Milk",
+          "name": "Cocoa Lover",
+          "reccommended": "TRUE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Milk",
+          "name": "Boba Fresh Milk",
+          "reccommended": "TRUE",
+          "hot": "FALSE",
+          "non-caffeinated": "TRUE"
+        },
+        {
+          "category": "Fresh Milk",
+          "name": "Matcha with Fresh Milk",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Milk",
+          "name": "Handmade Taro with Fresh Milk",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "TRUE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Classic Milk Tea ( Black / Green / Oolong Tea )",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Honey Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Classic Coffee",
+          "reccommended": "TRUE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Ginger Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Ice Cream Black / Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Coffee Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Hokkaido Pearl Milk Tea ( Caramel Toffee )",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Okinawa Pearl Milk Tea ( Roasted Brown Sugar )",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Classic Pearl Milk Tea ( Black / Green / Oolong Te",
+          "reccommended": "TRUE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Taro Pearl Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Mango Green Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "QQ Happy Family Milk Tea",
+          "reccommended": "TRUE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Matcha Red Bean Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        }
+      ]},
+    {"name":"ChaTime",
+    "self-serve": false,
+    "food": false,
+    "drinks": [
+        {
+          "category": "Signature Milk Tea",
+          "name": "Chatime Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Jasmine Green Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Chatime Pearl Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Chatime Roasted Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Brown Rice Green Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Brewed Oolong Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Caramel Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Vanilla Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Hazelnut Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Hazelnut Chocolate Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Malt Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Honey Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Honey Oolong Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Taro Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Coconut Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Honeydew Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Lychee Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Strawberry Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Banana Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Grass Jelly Roasted Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Grass Jelly Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Grass Jelly with Fresh Milk",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Matcha Red Bean Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Chatime Red Bean Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Honey Green Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Signature Milk Tea",
+          "name": "Wintermelon Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Mango Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Passion Fruit Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Peach Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Lychee Black/Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Kumquat Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Taiwan Plum Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Wintermelon Iced Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Taiwan Plum Lemon Ice Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Lemon Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Yogurt Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Honey Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Grape Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Grapefruit Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Mix Tea",
+          "name": "Wintermelon Lemon Iced Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Brown Rice Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Brewed Oolong Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Ichiban Roasted Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Jasmine Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Black Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Blue Mountain Green Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Japanese Sakura Sencha",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Japanese Genmaicha",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Formosa Oolong Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Taiwan Alishan JinShyuan Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea / Tea Espresso",
+          "name": "Anxi TieGuanyin Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Matcha Mousse",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Chocolate Mousse",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Jasmine Green Tea Mousse",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Roasted Tea Mousse",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Oolong Tea Mousse",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Black Tea Mousse",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Green/Black Tea Latte",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "TieGuanyin Tea Latte",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Roasted Tea Latte",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Oolong Tea Latte",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Matcha Tea Latte",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Mousse / Tea Latte",
+          "name": "Wintermelon Mousse",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Chatime Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Taiwan Mango Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Passion Fruit Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Grapefruit Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Lemon Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Lychee Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Lychee Yogurt Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Grape Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Peach Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "QQ Jelly",
+          "name": "QQ Honeydew Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Mango Slush",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Passionfruit Slush",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Grape Slush",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Coffee Smoothie",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Lemon Yogurt Smoothie",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Coconut Slush",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Honeydew Slush",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Milk Tea Smoothie",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Strawberry Slush",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Strawberry Yogurt Smoothie",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Taro Smoothie",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Taro Coconut Smoothie",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Matcha Red Bean Smoothie",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Strawberry Au Lait",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Smoothie / Slushie",
+          "name": "Strawberry Pudding Au Lait",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Taiwan Ginger Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Superior Pure Cocoa",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Longan & Red Date Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Honey Pomelo Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Kumquat Lemon Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Lemonade Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Kumquat Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Honey Lemon Aloe",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Energetic Mix",
+          "name": "Yogurt Lemon Juice",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Americano",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Cappuccino",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Hazelnut/Caramel/Vanilla Latte",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Cappuccino",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Mochaccino",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        }]
+    },
+    {"name":"Boba Up",
+    "self-serve": true,
+    "food": true,
+    "drinks":[
+        {
+          "category": "Special Drinks",
+          "name": "Rainbow Drink w/ Lychee Jelly",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Drinks",
+          "name": "Taro Oreo Slush w/ Cheese Foam + Taro Balls",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Drinks",
+          "name": "Passionfruit Sparkler w/ Aloe + Lychee Jelly",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Special Drinks",
+          "name": "Lime Refresher w/ Aloe",
+          "reccommended": "FALSE",
+          "hot": "FALSE",
+          "non-caffeinated": "FALSE"
+        }
+    ]},
+    {"name":"Ding Tea",
+    "self-serve": true,
+    "food": false,
+    "drinks": [
+        {
+          "category": "Fresh Tea",
+          "name": "Assam Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea",
+          "name": "Jasmine Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fresh Tea",
+          "name": "Oolong Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Peach Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Passion Fruit Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Strawberry Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Lychee Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Mango Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Pineapple Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Kiwi Green/Black Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Winter Melon Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Winter Melon Green Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Kumquat Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Flavored Tea",
+          "name": "Top Fruit Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Signature Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Jasmine Green Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Oolong Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Coffee Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Taro Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Matcha Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Chocolate Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Honey Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Strawberry Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Lychee Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Winter Melon Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Peach Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Mango Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Passion Fruit Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Brown Sugar Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Hazelnut Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Vanilla Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Hokkaido Black Milk Tea (Caramel)",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Milk Tea",
+          "name": "Hokkaido Oolong Milk Tea (Toffee Candy)",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Juice",
+          "name": "Aloe Vera Kiwi Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Juice",
+          "name": "Aloe Vera Honey Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Juice",
+          "name": "Honey Lemon Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Fruit Juice",
+          "name": "Passion Fruit Juice",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Yakult/Yogurt",
+          "name": "Green Tea Yakult/Yogurt",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Yakult/Yogurt",
+          "name": "Passion Fruit Yakult/Yogurt",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Yakult/Yogurt",
+          "name": "Mango Yakult/Yogurt",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Yakult/Yogurt",
+          "name": "Mango Yakult/Yogurt",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Yakult/Yogurt",
+          "name": "Strawberry Yakult/Yogurt",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Latte",
+          "name": "Black Tea Latte",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Latte",
+          "name": "Jasmine Green tea Latte",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Hokkaido Coffee",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Mocha Coffee",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Hazelnut Coffee",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Coffee",
+          "name": "Vanilla Coffee",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Hot Drink",
+          "name": "Ginger Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Hot Drink",
+          "name": "Logan Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Hot Drink",
+          "name": "Ginger Logan Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Hot Drink",
+          "name": "Ginger Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        },
+        {
+          "category": "Hot Drink",
+          "name": "Logan Milk Tea",
+          "reccommended": "FALSE",
+          "hot": "TRUE",
+          "non-caffeinated": "FALSE"
+        }
+      ]},
+      {"name":"Oasis Tea Zone",
+        "self-serve": false,
+        "food": true,
+        "drinks": [
+            {
+              "category": "Milk Tea",
+              "name": "Almond",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Banana",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Chocolate",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Chrysanthemum",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Coconut",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Coffee",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Green apple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Green milk tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Honey",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Honeydew",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "HongKong",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Jasmine",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Lavender",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Lemon",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Lychee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Matcha",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Mocha",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Oolong",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Passion",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Peach",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Pineapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Royal",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Taro",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea",
+              "name": "Thai",
+              "reccommended": "FALSE",
+              "hot": "TRUE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Black tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Green tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Oolong tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Chrysanthemum",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Blueberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Green apple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Honey",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Lemon",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Lychee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Passion",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Peach",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Pineapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Sour plum",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Flavor Tea",
+              "name": "Yogurt",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Blueberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Chocolate",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Coconut",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Coffee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Green apple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Green mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Honey",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Honeydew",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "HongKong",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Lavender",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Lemon",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Lychee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Mocha",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Passion",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Peach",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Pineapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Sour plum",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Slush",
+              "name": "Yogurt",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Almond",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Banana",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Blueberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Chocolate",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Chrysanthemum",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Coconut",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Coffee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Green apple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Honey",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Honeydew",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "HongKong",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Jasmine",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Lavender",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Lemon",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Lychee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Matcha",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Mocha",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Passion",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Peach",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Pineapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Sour plum",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Taro",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Thai",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Snow",
+              "name": "Yogurt",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Specialty",
+              "name": "Cookies n’ cream",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Specialty",
+              "name": "Matcha blast",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Specialty",
+              "name": "Mocha blast",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Specialty",
+              "name": "Vanilla Strawberry Crunch",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Smoothie",
+              "name": "Avocado",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Smoothie",
+              "name": "Blueberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Smoothie",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Smoothie",
+              "name": "Pineapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Smoothie",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Smoothie",
+              "name": "Durian",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Real Fruit Juice",
+              "name": "Blueberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Real Fruit Juice",
+              "name": "Lychee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Real Fruit Juice",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Real Fruit Juice",
+              "name": "Peach",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Real Fruit Juice",
+              "name": "Pineapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Real Fruit Juice",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            }
+        ]},
+        {"name": "MeeSum",
+        "self-serve": false,
+        "food": true,
+        "drinks": [
+            {
+              "category": "Signature",
+              "name": "Grass Jelly Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Thai Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Rose Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Okinawa Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Citron Honey Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Naked Panda",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Pink Lady Green Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Red Bean Milk Shake",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Signature",
+              "name": "Avocado Milk Shake",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Almond",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Malt",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Chocolate",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Mint",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Greenapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Pudding",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Hong Kong Style",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Lavender",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Caramel",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Matcha",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Coffee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Peach",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Honeydew",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Taro",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Black Sesame",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Coconut",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Mocha",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Honey",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Milk Tea / Milkshakes",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Mikey's Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Strawberry Taro Supreme",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Honey Lemon Resolve",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Chipmunks Acorn",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Minty Cocoa",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Lucious Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Pina Colada",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Brown Bear",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Mee Sum Family Creations",
+              "name": "Chocovado",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Black Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Black Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Lemon Black Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Earl Grey Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Earl Grey Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Jasmine Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Jasmine Green Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Lemon Green Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Oolong Milk Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Original",
+              "name": "Oolong Tea",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Hot Loose Leaf Tea",
+              "name": "Earl Grey",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Hot Loose Leaf Tea",
+              "name": "Oolong",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Hot Loose Leaf Tea",
+              "name": "Jasmine Green",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Hot Loose Leaf Tea",
+              "name": "Genmaicha",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Greenapple",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Peach",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Honey",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Mint",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Mango",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Lychee",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Passion Fruit",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Kumquat",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Strawberry",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            },
+            {
+              "category": "Green / Black Tea / Smoothie",
+              "name": "Yogurt",
+              "reccommended": "FALSE",
+              "hot": "FALSE",
+              "non-caffeinated": "FALSE"
+            }
+          ]},
+          {"name": "Kung Fu Tea",
+            "self-serve": false,
+            "food": false,
+            "drinks": [
+                {
+                  "category": "Classic",
+                  "name": "KUNG FU BLACK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Classic",
+                  "name": "KUNG FU GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Classic",
+                  "name": "KUNG FU OOLONG TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Classic",
+                  "name": "KUNG FU HONEY TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Classic",
+                  "name": "WINTER MELON TEA/GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Classic",
+                  "name": "HONEY BLACK/GREEN/OOLONG TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Classic",
+                  "name": "LONGAN JUJUBE TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "KUNG FU MILK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "MILK GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "OOLONG MILK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "TARO MILK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "TARO MILK GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "ROSEHIP MILK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "COCONUT MILK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "COFFEE MILK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "HONEY MILK TEA/GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "ALMOND MILK TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk Tea",
+                  "name": "WINTER MELON MILK GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "TARO",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "RED BEAN",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "MANGO/MANGO SNOW",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "PINEAPPLE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "CARIBBEAN BREEZE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "KIWI APPLE KALE SLUSH",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "OREO SLUSH",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "PINA COLADA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "PASSION FRUIT",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "MATCHA RED BEAN",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "STRAWBERRY MILK",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "COFFEE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "ITALIAN MOCHA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Slush",
+                  "name": "CARAMEL MACCHIATO",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "HONEY LEMONADE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "LYCHEE PUNCH",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "MANGO GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "PEACH OOLONG TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "ORANGE GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "ROSEHIP LEMONADE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "GRAPEFRUIT GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "SUNSHINE PINEAPPLE TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "PASSION FRUIT GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "STRAWBERRY LEMON GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Punch",
+                  "name": "STRAWBERRY LEMONADE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Yogurt",
+                  "name": "YOGURT GREEN TEA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Yogurt",
+                  "name": "YOGURT ORANGE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Yogurt",
+                  "name": "YOGURT GRAPEFRUIT",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "CHAI MILK",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "MATCHA MILK",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "GINGER MILK",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "COCOA CREAM WOW WITH MILK CAP",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "COCOA CREAM WOW",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "LACTOSE-FREE WOW MILK",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "OREO",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "RED BEAN",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "HERBAL JELLY",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Milk",
+                  "name": "SESAME MATCHA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Espresso",
+                  "name": "SIGNATURE COFFEE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Espresso",
+                  "name": "LATTE",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Espresso",
+                  "name": "MOCHA",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Espresso",
+                  "name": "CAPPUCCINO",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                },
+                {
+                  "category": "Espresso",
+                  "name": "CARAMEL MACCHIATO",
+                  "reccommended": "FALSE",
+                  "hot": "FALSE",
+                  "non-caffeinated": "FALSE"
+                }
+              ]}
+]

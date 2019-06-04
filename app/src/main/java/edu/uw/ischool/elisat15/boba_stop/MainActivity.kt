@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,14 +22,14 @@ class MainActivity : AppCompatActivity() {
 
         val decideButton = findViewById<Button>(R.id.decide_button)
         val businessInput = findViewById<EditText>(R.id.name_input)
-        
-        val myIntent = Intent(this, RandomizerActivity::class.java)
-        val bobaIntent = Intent(this, BobaActivity::class.java)
+
+        val shakeService = Intent(this, ShakeService::class.java)
+        val myIntent = Intent(this, BobaActivity::class.java)
 
         decideButton.setOnClickListener {
             myIntent.putExtra("bobaStop", businessInput.text.toString())
-            bobaIntent.putExtra("shopName", businessInput.text.toString())
             BobaDataManager.instance.dataManager.currentBobaStop = businessInput.text.toString()
+            startService(shakeService)
             startActivity(myIntent)
         }
     }
