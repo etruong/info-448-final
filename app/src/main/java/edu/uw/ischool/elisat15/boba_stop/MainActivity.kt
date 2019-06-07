@@ -18,8 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.v(TAG, BobaDataManager.instance.dataManager.bobaData.toString())
-
         val decideButton = findViewById<Button>(R.id.decide_button)
         val businessInput = findViewById<EditText>(R.id.name_input)
 

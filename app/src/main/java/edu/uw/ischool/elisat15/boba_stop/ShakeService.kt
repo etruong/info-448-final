@@ -24,6 +24,7 @@ class ShakeService : Service(), SensorEventListener {
     }
 
     override fun onBind(intent: Intent?): IBinder? {
+
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
@@ -88,7 +89,7 @@ class ShakeService : Service(), SensorEventListener {
     private fun executeShakeAction() {
         Log.v("service", "executing shake action")
         sendMessageToActivity()
-        this.stopSelf()
+//        this.stopSelf()
     }
 
     private fun updateAccelParameter(xNewAccel: Float, yNewAccel: Float, zNewAccel: Float) {
@@ -112,6 +113,7 @@ class ShakeService : Service(), SensorEventListener {
 
     override fun onDestroy() {
         super.onDestroy()
+        Log.v(TAG, "destroying ")
         this.stopSelf()
     }
 

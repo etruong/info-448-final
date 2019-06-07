@@ -4,7 +4,7 @@ import android.app.Application
 
 class BobaDataManager: Application() {
 
-    lateinit var dataManager: OfflineBobaRepository
+    lateinit var dataManager: BobaRepository
         private set
 
     companion object {
@@ -17,7 +17,7 @@ class BobaDataManager: Application() {
         instance = this
 
         dataManager = OfflineBobaRepository()
-        dataManager.updateData(this)
+        dataManager.fetchData(this)
     }
 
 }

@@ -11,14 +11,18 @@ import kotlin.math.roundToInt
 
 const val TAG: String = "OfflineBobaRepository"
 
-class OfflineBobaRepository {
+class OfflineBobaRepository: BobaRepository {
 
-    val bobaData: ArrayList<BobaStop> = arrayListOf()
+    override val bobaData: ArrayList<BobaStopInfo> = arrayListOf()
     val bobaMenuData: ArrayList<BobaMenu> = arrayListOf()
-    lateinit var currentLocation: String
-    lateinit var currentBobaStop: String
+    override lateinit var currentLocation: String
+    override lateinit var currentBobaStop: String
 
-    fun returnBobaStop(name: String): BobaStop? {
+    override fun fetchData(context: Context) {
+        updateData(context)
+    }
+
+    override fun returnBobaStop(name: String): BobaStopInfo? {
         val nameLower = name.toLowerCase()
         for(num in 0 until bobaData.size) {
             val bobaStop = bobaData.get(num)
@@ -69,7 +73,7 @@ class OfflineBobaRepository {
         }
     }
 
-    fun returnBobaStopMenu(name: String): BobaMenu? {
+    override fun returnBobaStopMenu(name: String): BobaMenu? {
         for (index in 0 until bobaMenuData.size) {
             val bobaMenu = bobaMenuData.get(index)
             if (bobaMenu.name.toLowerCase() == name.toLowerCase()) {
@@ -79,7 +83,7 @@ class OfflineBobaRepository {
         return null
     }
 
-    fun returnRandomBoba(name: String): Drink? {
+    override fun returnRandomBoba(name: String): Drink? {
         val bobaMenu = returnBobaStopMenu(name)
         if (bobaMenu != null) {
             val bobaDrinks = bobaMenu!!.drinkMenu
@@ -92,6 +96,9 @@ class OfflineBobaRepository {
     }
 
     fun updateData(context: Context) {
+
+        fetchBobaMenuData(context)
+
         val jsonString: String? = try {
             // grab file from assets folder & read it to a String
             val inputStream = context.assets.open("boba-data.json")
@@ -126,13 +133,12 @@ class OfflineBobaRepository {
             val bobaState = bobaStopJSONObject.getString("State")
             val bobaPhone = bobaStopJSONObject.getString("Phone")
 
-            val oneBobaStop = BobaStop(bobaID, bobaName, bobaRating, bobaCoordinateLatitude, bobaCoordinateLongitude,
-                bobaAddress, bobaCity, bobaZipCode, bobaState, bobaPhone)
+            val oneBobaStop = BobaStopInfo(bobaName, bobaRating, bobaCoordinateLatitude, bobaCoordinateLongitude,
+                bobaAddress, bobaCity, bobaZipCode, bobaState, bobaPhone, returnBobaStopMenu(bobaName))
 
             bobaData.add(oneBobaStop)
         }
     }
-
 }
 
 data class BobaStop (val id: String, val name: String, val rating: String, val coordinatesLatitude: String,
