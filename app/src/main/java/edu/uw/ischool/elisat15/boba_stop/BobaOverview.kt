@@ -32,7 +32,7 @@ class BobaOverview : Fragment() {
             startActivity(randomizerIntent)
         }
 
-        shareBtn.setOnClickListener {
+        menuBtn.setOnClickListener {
             val newFragment = MenuFragment()
 
             val transaction = fragmentManager!!.beginTransaction().apply {
