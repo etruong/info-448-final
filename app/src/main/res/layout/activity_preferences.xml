@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Preferences">
+
+    <TextView
+            android:text="BobaStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="72dp"/>
+    <TextView
+            android:text="Preferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintEnd_toEndOf="parent" android:textSize="36sp" android:textColor="#E91E63"
+            app:fontFamily="@font/caveat"/>
+    <TextView
+            android:text="Notify me of new boba stops..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.245" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" android:layout_marginTop="40dp"/>
+    <Switch
+            android:text="Near me"
+            android:layout_width="156dp"
+            android:layout_height="29dp" tools:layout_editor_absoluteY="233dp"
+            tools:layout_editor_absoluteX="53dp" android:id="@+id/switch1"/>
+</android.support.constraint.ConstraintLayout>
