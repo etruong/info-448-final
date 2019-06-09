@@ -17,6 +17,7 @@ class OfflineBobaRepository: BobaRepository {
     val bobaMenuData: ArrayList<BobaMenu> = arrayListOf()
     override lateinit var currentLocation: String
     override lateinit var currentBobaStop: String
+    override var online: Boolean = false
 
     override fun fetchData(context: Context) {
         updateData(context)
@@ -25,7 +26,7 @@ class OfflineBobaRepository: BobaRepository {
     override fun returnBobaStop(name: String): BobaStopInfo? {
         val nameLower = name.toLowerCase()
         for(num in 0 until bobaData.size) {
-            val bobaStop = bobaData.get(num)
+            val bobaStop = bobaData[num]
             if (bobaStop.name.toLowerCase() == nameLower) {
                 return bobaStop
             }
@@ -56,7 +57,7 @@ class OfflineBobaRepository: BobaRepository {
             val bobaStopName = dataJSONObject.getString("name")
             val bobaStopSelfServe = dataJSONObject.getBoolean("self-serve")
             val bobaStopFood = dataJSONObject.getBoolean("food")
-            Log.v(TAG, dataJSONObject.toString())
+//            Log.v(TAG, dataJSONObject.toString())
             val bobaStopDrinks = arrayListOf<Drink>()
             val bobaStopDrinksJSONArray = dataJSONObject.getJSONArray("drinks")
             for (bobaDrinkIndex in 0 until bobaStopDrinksJSONArray.length()) {
@@ -92,7 +93,6 @@ class OfflineBobaRepository: BobaRepository {
         } else {
             return null
         }
-
     }
 
     fun updateData(context: Context) {
@@ -141,9 +141,9 @@ class OfflineBobaRepository: BobaRepository {
     }
 }
 
-data class BobaStop (val id: String, val name: String, val rating: String, val coordinatesLatitude: String,
-                 val coordinatesLongitude: String, val address: String, val city: String, val zipCode: String,
-                 val state: String, val phone: String)
+//data class BobaStop (val id: String, val name: String, val rating: String, val coordinatesLatitude: String,
+//                 val coordinatesLongitude: String, val address: String, val city: String, val zipCode: String,
+//                 val state: String, val phone: String)
 
 data class BobaMenu (val name: String, val selfServe: Boolean, val food: Boolean, val drinkMenu: ArrayList<Drink>)
 

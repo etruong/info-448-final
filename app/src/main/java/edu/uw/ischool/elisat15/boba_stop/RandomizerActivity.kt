@@ -53,7 +53,6 @@ class RandomizerActivity : AppCompatActivity() {
                 val fragmentTransaction = fragmentManager.beginTransaction()
                 val fragment = BobaDeciderResultFragment()
                 fragmentTransaction.replace(R.id.fragment_container, fragment)
-                fragmentTransaction.addToBackStack(null)
                 fragmentTransaction.commit()
             }
         }

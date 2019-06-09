@@ -21,7 +21,6 @@ class BobaDeciderResultFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -31,18 +30,27 @@ class BobaDeciderResultFragment : Fragment() {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_boba_decider_result, container, false)
         v.findViewById<TextView>(R.id.company_header2).text = BobaDataManager.instance.dataManager.currentBobaStop
-//        var index = Math.random().times(list.size - 1).roundToInt()
+
         val results = BobaDataManager.instance.dataManager.returnRandomBoba(BobaDataManager.instance.dataManager.currentBobaStop)
         v.findViewById<TextView>(R.id.decider_result).text = results!!.name
 
-        v.findViewById<Button>(R.id.go_back_info).setOnClickListener {
+        val infoButton = v.findViewById<Button>(R.id.go_back_info)
+        infoButton.setOnClickListener {
             val intent = Intent(this.activity, BobaActivity::class.java)
             startActivity(intent)
         }
+        return v
+    }
 
+    override fun onStop() {
+        super.onStop()
         val serviceIntent = Intent(this.activity, ShakeService::class.java)
         this.activity!!.stopService(serviceIntent)
+    }
 
-        return v
+    override fun onDestroy() {
+        super.onDestroy()
+        val serviceIntent = Intent(this.activity, ShakeService::class.java)
+        this.activity!!.stopService(serviceIntent)
     }
 }

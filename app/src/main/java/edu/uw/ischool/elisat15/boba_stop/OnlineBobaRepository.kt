@@ -4,8 +4,11 @@ import android.app.Notification.DEFAULT_SOUND
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.getIntent
+import android.os.Bundle
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.NotificationManagerCompat
+import android.support.v4.content.ContextCompat.startActivity
 import android.util.Log
 import android.widget.Toast
 import com.google.firebase.database.*
@@ -13,12 +16,9 @@ import kotlin.math.roundToInt
 
 class OnlineBobaRepository: BobaRepository {
 
-    override fun fetchData(context: Context) {
-        connectOnlineDatabase(context)
-    }
-
     private val TAG: String = "OnlineBobaRepository"
 
+    override var online: Boolean = true
     override val bobaData: ArrayList<BobaStopInfo> = arrayListOf()
     override lateinit var currentLocation: String
     override lateinit var currentBobaStop: String
@@ -32,10 +32,14 @@ class OnlineBobaRepository: BobaRepository {
 
     private lateinit var database: DatabaseReference
 
+    override fun fetchData(context: Context) {
+        connectOnlineDatabase(context)
+    }
+
     fun connectOnlineDatabase(context: Context): BobaStopInfo? {
 
         database = FirebaseDatabase.getInstance().reference
-        Log.v(TAG, "database variable: ${database.toString()}")
+
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 Log.v(TAG, "enter on data change")
@@ -53,18 +57,19 @@ class OnlineBobaRepository: BobaRepository {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                Log.w(TAG, "loadData:onCancelled", databaseError.toException())
+                Log.v(TAG, "loadData:onCancelled", databaseError.toException())
             }
         }
         database.addValueEventListener(postListener)
-
         return newBobaPlaceObject
-
     }
 
     private fun createNotification(context: Context) {
+
         val bobaIntent = Intent(context, BobaActivity::class.java)
+        bobaIntent.putExtra("bobaStop", newBobaPlaceObject!!.name)
         val bobaPendingIntent = PendingIntent.getActivity(context, 1, bobaIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+
         BobaDataManager.instance.dataManager.currentBobaStop = newBobaPlaceObject!!.name
         var builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_local_cafe)
@@ -73,9 +78,7 @@ class OnlineBobaRepository: BobaRepository {
                 .bigText("Check out ${newBobaPlaceObject!!.name} it just opened up near you!"))
             .setDefaults(DEFAULT_SOUND)
             .setPriority(NotificationCompat.PRIORITY_MAX)
-            .setAutoCancel(true)
             .setContentIntent(bobaPendingIntent)
-
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(NOTIFICATION_ID, builder.build())
     }

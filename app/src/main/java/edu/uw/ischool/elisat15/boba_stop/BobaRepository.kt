@@ -7,6 +7,7 @@ interface BobaRepository {
     val bobaData: ArrayList<BobaStopInfo>
     var currentLocation: String
     var currentBobaStop: String
+    var online: Boolean
 
     fun fetchData(context: Context)
     fun returnBobaStop(name: String): BobaStopInfo?
