@@ -17,11 +17,13 @@ class BobaOverview : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("BobaOverview", BobaDataManager.instance.dataManager.currentBobaStop)
 
         val bobaInfo = BobaDataManager.instance.dataManager
             .returnBobaStop(BobaDataManager.instance.dataManager.currentBobaStop)
 
-        shopName.text = BobaDataManager.instance.dataManager.currentBobaStop
+        shopName.text = BobaDataManager.instance.dataManager.currentBobaStop.capitalizeWords()
+        Log.d("BobaOverview", bobaInfo.toString())
         shopAddress.text = bobaInfo!!.address
         shopPhone.text = bobaInfo!!.phone
         Log.d("BobaOverview", shopPhone.text.toString())
@@ -70,4 +72,7 @@ class BobaOverview : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_boba_overview, container, false)
     }
+
+    fun String.capitalizeWords(): String = split(" ").map { it.capitalize() }.joinToString(" ")
+
 }
