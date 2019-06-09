@@ -1,23 +1,18 @@
 package edu.uw.ischool.elisat15.boba_stop
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.text.TextUtils.replace
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_boba_overview.*
 
 class BobaOverview : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -28,6 +23,8 @@ class BobaOverview : Fragment() {
 
         shopName.text = BobaDataManager.instance.dataManager.currentBobaStop
         shopAddress.text = bobaInfo!!.address
+        shopPhone.text = bobaInfo!!.phone
+        Log.d("BobaOverview", shopPhone.text.toString())
 
         val randomizerIntent = Intent(activity, RandomizerActivity::class.java)
         deciderBtn.setOnClickListener {
@@ -47,13 +44,21 @@ class BobaOverview : Fragment() {
         }
 
         shareBtn.setOnClickListener {
-            val newFragment = ShareFragment()
-            val transaction = fragmentManager!!.beginTransaction().apply {
-                replace(R.id.boba_overview_id, newFragment)
-                addToBackStack(null)
-            }
+            val bobaName = BobaDataManager.instance.dataManager.currentBobaStop
+            val addy = BobaDataManager.instance.dataManager.returnBobaStop(bobaName)!!.address
+            val name = bobaName.replace(" ", "%20")
+            val shareAddy = addy.replace(" ", "%20")
+            val shareLink = "https://www.yelp.com/search?find_desc={bobaStop}&find_loc={addy}".replace(
+                "{bobaStop}",
+                name
+            ).replace("{addy}", shareAddy)
 
-            transaction.commit()
+            val shareMsg = "Check out $bobaName: $shareLink"
+
+            val intent = Intent(Intent.ACTION_SENDTO)
+            intent.data = Uri.parse("sms:")
+            intent.putExtra("sms_body", shareMsg)
+            startActivity(intent)
         }
     }
 

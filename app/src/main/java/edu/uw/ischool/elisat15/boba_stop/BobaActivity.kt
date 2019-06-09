@@ -21,7 +21,7 @@ class BobaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_boba)
-
+        
         //BobaDataManager.instance.dataManager.fetchBobaMenuData(this)
 
         val fragmentTransaction = fragmentManager.beginTransaction()
