@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
 
         val shakeService = Intent(this, ShakeService::class.java)
         val myIntent = Intent(this, BobaActivity::class.java)
+        val intent = Intent(this, MapsActivity::class.java)
+
+        mapButton.setOnClickListener {
+            startActivity(intent)
+        }
 
         decideButton.setOnClickListener {
             myIntent.putExtra("bobaStop", businessInput.text.toString())
