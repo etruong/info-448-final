@@ -34,11 +34,11 @@ class BobaDeciderResultFragment : Fragment() {
         val results = BobaDataManager.instance.dataManager.returnRandomBoba(BobaDataManager.instance.dataManager.currentBobaStop)
         v.findViewById<TextView>(R.id.decider_result).text = results!!.name
 
-        val infoButton = v.findViewById<Button>(R.id.go_back_info)
-        infoButton.setOnClickListener {
-            val intent = Intent(this.activity, BobaActivity::class.java)
-            startActivity(intent)
-        }
+//        val infoButton = v.findViewById<Button>(R.id.go_back_info)
+//        infoButton.setOnClickListener {
+//            val intent = Intent(this.activity, BobaActivity::class.java)
+//            startActivity(intent)
+//        }
         return v
     }
 

@@ -36,7 +36,7 @@ class RandomizerActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        registerReceiver();
+        registerReceiver()
     }
 
     private fun registerReceiver() {

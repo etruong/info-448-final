@@ -8,7 +8,10 @@ class CheckNewBobaService: Service() {
 
     override fun onBind(intent: Intent?): IBinder? {return null}
 
-    
+    override fun onCreate() {
+        super.onCreate()
+
+    }
 
 
 }
