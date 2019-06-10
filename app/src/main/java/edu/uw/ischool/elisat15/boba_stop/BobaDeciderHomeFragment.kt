@@ -15,10 +15,6 @@ import org.w3c.dom.Text
 
 class BobaDeciderHome : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val companyHeader = getView()!!.findViewById<TextView>(R.id.company_header)
@@ -32,11 +28,16 @@ class BobaDeciderHome : Fragment() {
     ): View? {
 
         val v = inflater.inflate(R.layout.fragment_boba_decider_home, container, false)
-        val serviceIntent = Intent(this.activity, ShakeService::class.java)
-        this.activity!!.startService(serviceIntent)
+        BobaDataManager.instance.dataManager.serviceIntent = Intent(this.activity, ShakeService::class.java)
+        this.activity!!.startService(BobaDataManager.instance.dataManager.serviceIntent)
 
         // Inflate the layout for this fragment
         return v
+    }
+
+    override fun onStart() {
+        super.onStart()
+        this.activity!!.startService(BobaDataManager.instance.dataManager.serviceIntent)
     }
 
 }

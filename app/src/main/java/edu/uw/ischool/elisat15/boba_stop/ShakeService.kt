@@ -27,15 +27,14 @@ class ShakeService : Service(), SensorEventListener {
 
     var firstUpdate: Boolean = true
     var shakeInitiated: Boolean = false
-    var shakeThreshold: Float = 1.5F // difference btwn acceleration
+    var shakeThreshold: Float = 4.5F // difference btwn acceleration
 
     lateinit var sensorManager: SensorManager
     lateinit var accelerator: Sensor
 
-
     override fun onCreate() {
         super.onCreate()
-        Log.v("service", "created service")
+        Log.v("ShakeService", "created service")
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         accelerator = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
         sensorManager.registerListener(this, accelerator, SensorManager.SENSOR_DELAY_NORMAL)
@@ -74,7 +73,7 @@ class ShakeService : Service(), SensorEventListener {
     }
 
     private fun executeShakeAction() {
-        Log.v("service", "executing shake action")
+        Log.v("ShakeService", "executing shake action")
         sendMessageToActivity()
     }
 
@@ -107,8 +106,6 @@ class ShakeService : Service(), SensorEventListener {
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.v(TAG, "destroying ")
-        this.stopSelf()
+        Log.v("ShakeService", "destroyed service")
     }
-
 }

@@ -22,16 +22,17 @@ class BobaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_boba)
 
-        generateHomeBobaActivity(false)
+        generateHomeBobaActivity(intent,false)
     }
 
     override fun onNewIntent(intent: Intent) {
-        generateHomeBobaActivity(true)
+        generateHomeBobaActivity(intent, true)
     }
 
-    private fun generateHomeBobaActivity(returnStack: Boolean) {
+    private fun generateHomeBobaActivity(thisIntent: Intent, returnStack: Boolean) {
 
-        val chosenBobaStop = intent.getStringExtra("bobaStop")
+        val chosenBobaStop = thisIntent.getStringExtra("bobaStop")
+        Log.v(TAG, chosenBobaStop)
         BobaDataManager.instance.dataManager.currentBobaStop = chosenBobaStop
         val bundle = Bundle()
         bundle.putString("bobaStop", chosenBobaStop)
@@ -44,5 +45,11 @@ class BobaActivity : AppCompatActivity() {
             fragmentTransaction.addToBackStack(null)
         }
         fragmentTransaction.commit()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val serviceIntent = Intent(this, ShakeService::class.java)
+        this!!.stopService(serviceIntent)
     }
 }

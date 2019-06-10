@@ -13,6 +13,13 @@ import android.util.Log
 import android.widget.Toast
 import com.google.firebase.database.*
 import kotlin.math.roundToInt
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context.NOTIFICATION_SERVICE
+import android.os.Build
+import android.provider.Settings.Global.getString
+import android.support.v4.content.ContextCompat.getSystemService
+
 
 class OnlineBobaRepository: BobaRepository {
 
@@ -22,6 +29,7 @@ class OnlineBobaRepository: BobaRepository {
     override val bobaData: ArrayList<BobaStopInfo> = arrayListOf()
     override lateinit var currentLocation: String
     override lateinit var currentBobaStop: String
+    override lateinit var serviceIntent: Intent
 
     // variables about new boba shop notification
     var firstInitalized: Boolean = false
@@ -43,7 +51,7 @@ class OnlineBobaRepository: BobaRepository {
     fun connectOnlineDatabase(context: Context): BobaStopInfo? {
 
         database = FirebaseDatabase.getInstance().reference
-
+        createNotificationChannel(context)
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 Log.v(TAG, "enter on data change")
@@ -52,6 +60,7 @@ class OnlineBobaRepository: BobaRepository {
                 if (newBobaPlace) {
 
                     newBobaPlace = false
+                    bobaData.add(newBobaPlaceObject!!)
                     Log.v(TAG, "hello")
                     createNotification(context)
 
@@ -72,8 +81,6 @@ class OnlineBobaRepository: BobaRepository {
 
         val bobaIntent = Intent(context, BobaActivity::class.java)
         bobaIntent.putExtra("bobaStop", newBobaPlaceObject!!.id)
-        bobaIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        bobaIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         val bobaPendingIntent = PendingIntent.getActivity(context, 1, bobaIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
         BobaDataManager.instance.dataManager.currentBobaStop = newBobaPlaceObject!!.id
@@ -87,8 +94,20 @@ class OnlineBobaRepository: BobaRepository {
             .setContentIntent(bobaPendingIntent)
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(NOTIFICATION_ID, builder.build())
+    }
 
-
+    private fun createNotificationChannel(context: Context) {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "Boba Up"
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel(CHANNEL_ID, name, importance)
+            // Register the channel with the system
+            val notificationManager: NotificationManager =
+                context.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
 
     override fun returnBobaStop(id: String): BobaStopInfo? {

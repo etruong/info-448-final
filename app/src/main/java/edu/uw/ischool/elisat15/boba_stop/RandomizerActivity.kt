@@ -26,8 +26,6 @@ class RandomizerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_randomizer)
 
-//        BobaDataManager.instance.dataManager.fetchBobaMenuData(this)
-
         val bundle = Bundle()
         bundle.putString("bobaStop", intent.getStringExtra("bobaStop"))
 
@@ -36,6 +34,7 @@ class RandomizerActivity : AppCompatActivity() {
         fragment.arguments = bundle
         fragmentTransaction.replace(R.id.fragment_container, fragment)
         fragmentTransaction.commit()
+
     }
 
     override fun onStart() {
@@ -45,8 +44,6 @@ class RandomizerActivity : AppCompatActivity() {
 
     private fun registerReceiver() {
         Log.v(TAG, "create reciever")
-
-        val activityContext = this
 
         broadcastReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context, intent: Intent) {
@@ -68,6 +65,12 @@ class RandomizerActivity : AppCompatActivity() {
         if (broadcastReceiver != null) {
             unregisterReceiver(broadcastReceiver)
         }
+        stopService(BobaDataManager.instance.dataManager.serviceIntent)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        stopService(BobaDataManager.instance.dataManager.serviceIntent)
     }
 
 }

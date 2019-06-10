@@ -1,6 +1,7 @@
 package edu.uw.ischool.elisat15.boba_stop
 
 import android.content.Context
+import android.content.Intent
 
 interface BobaRepository {
 
@@ -8,6 +9,7 @@ interface BobaRepository {
     var currentLocation: String
     var currentBobaStop: String
     var online: Boolean
+    var serviceIntent: Intent
 
     fun fetchData(context: Context)
     fun returnCurrentBobaStop(): BobaStopInfo?

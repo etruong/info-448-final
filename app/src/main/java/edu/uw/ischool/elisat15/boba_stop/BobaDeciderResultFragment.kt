@@ -41,19 +41,6 @@ class BobaDeciderResultFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        val serviceIntent = Intent(this.activity, ShakeService::class.java)
-        this.activity!!.startService(serviceIntent)
-    }
-
-    override fun onStop() {
-        super.onStop()
-        val serviceIntent = Intent(this.activity, ShakeService::class.java)
-        this.activity!!.stopService(serviceIntent)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        val serviceIntent = Intent(this.activity, ShakeService::class.java)
-        this.activity!!.stopService(serviceIntent)
+        this.activity!!.startService(BobaDataManager.instance.dataManager.serviceIntent)
     }
 }

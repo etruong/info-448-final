@@ -1,6 +1,7 @@
 package edu.uw.ischool.elisat15.boba_stop
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -17,6 +18,7 @@ class OfflineBobaRepository: BobaRepository {
     val bobaMenuData: ArrayList<BobaMenu> = arrayListOf()
     override lateinit var currentLocation: String
     override lateinit var currentBobaStop: String
+    override lateinit var serviceIntent: Intent
     override var online: Boolean = false
 
     override fun fetchData(context: Context) {
