@@ -11,24 +11,27 @@ import kotlin.math.roundToInt
 
 const val TAG: String = "OfflineBobaRepository"
 
-class OfflineBobaRepository : BobaRepository {
+class OfflineBobaRepository: BobaRepository {
 
     override val bobaData: ArrayList<BobaStopInfo> = arrayListOf()
     val bobaMenuData: ArrayList<BobaMenu> = arrayListOf()
     override lateinit var currentLocation: String
     override lateinit var currentBobaStop: String
+    override var online: Boolean = false
 
     override fun fetchData(context: Context) {
         updateData(context)
     }
 
-    override fun returnBobaStop(name: String): BobaStopInfo? {
-        val nameLower = name.toLowerCase()
-        for (num in 0 until bobaData.size) {
-            val bobaStop = bobaData.get(num)
-            Log.d("OffRepo", nameLower + " " + bobaStop.name)
+    override fun returnCurrentBobaStop(): BobaStopInfo? {
+        return returnBobaStop(currentBobaStop)
+    }
 
-            if (bobaStop.name.toLowerCase() == nameLower) {
+    override fun returnBobaStop(id: String): BobaStopInfo? {
+//        val nameLower = name.toLowerCase()
+        for(num in 0 until bobaData.size) {
+            val bobaStop = bobaData[num]
+            if (bobaStop.id.toLowerCase() == id) {
                 return bobaStop
             }
         }
@@ -58,18 +61,16 @@ class OfflineBobaRepository : BobaRepository {
             val bobaStopName = dataJSONObject.getString("name")
             val bobaStopSelfServe = dataJSONObject.getBoolean("self-serve")
             val bobaStopFood = dataJSONObject.getBoolean("food")
-            Log.v(TAG, dataJSONObject.toString())
+//            Log.v(TAG, dataJSONObject.toString())
             val bobaStopDrinks = arrayListOf<Drink>()
             val bobaStopDrinksJSONArray = dataJSONObject.getJSONArray("drinks")
             for (bobaDrinkIndex in 0 until bobaStopDrinksJSONArray.length()) {
                 val drink = bobaStopDrinksJSONArray[bobaDrinkIndex] as JSONObject
-                val drinkObject = Drink(
-                    drink.getString("category"),
+                val drinkObject = Drink(drink.getString("category"),
                     drink.getString("name"),
                     drink.getBoolean("reccommended"),
                     drink.getBoolean("hot"),
-                    drink.getBoolean("non-caffeinated")
-                )
+                    drink.getBoolean("non-caffeinated"))
                 bobaStopDrinks.add(drinkObject)
             }
             val bobaMenu = BobaMenu(bobaStopName, bobaStopSelfServe, bobaStopFood, bobaStopDrinks)
@@ -77,18 +78,18 @@ class OfflineBobaRepository : BobaRepository {
         }
     }
 
-    override fun returnBobaStopMenu(name: String): BobaMenu? {
-        for (index in 0 until bobaMenuData.size) {
-            val bobaMenu = bobaMenuData.get(index)
-            if (bobaMenu.name.toLowerCase() == name.toLowerCase()) {
-                return bobaMenu
-            }
-        }
-        return null
+    override fun returnBobaStopMenu(id: String): BobaMenu? {
+//        for (index in 0 until bobaMenuData.size) {
+//            val bobaMenu = bobaMenuData.get(index)
+//            if (bobaMenu.name.toLowerCase() == name.toLowerCase()) {
+//                return bobaMenu
+//            }
+//        }
+        return returnBobaStop(id)!!.menu
     }
 
-    override fun returnRandomBoba(name: String): Drink? {
-        val bobaMenu = returnBobaStopMenu(name)
+    override fun returnRandomBoba(id: String): Drink? {
+        val bobaMenu = returnBobaStopMenu(id)
         if (bobaMenu != null) {
             val bobaDrinks = bobaMenu!!.drinkMenu
             val randomIndex = Math.random().times(bobaDrinks.size - 1).roundToInt()
@@ -96,7 +97,6 @@ class OfflineBobaRepository : BobaRepository {
         } else {
             return null
         }
-
     }
 
     fun updateData(context: Context) {
@@ -137,25 +137,19 @@ class OfflineBobaRepository : BobaRepository {
             val bobaState = bobaStopJSONObject.getString("State")
             val bobaPhone = bobaStopJSONObject.getString("Phone")
 
-            val oneBobaStop = BobaStopInfo(
-                bobaName, bobaRating, bobaCoordinateLatitude, bobaCoordinateLongitude,
-                bobaAddress, bobaCity, bobaZipCode, bobaState, bobaPhone, returnBobaStopMenu(bobaName)
-            )
+            val oneBobaStop = BobaStopInfo(bobaID, bobaName, bobaRating, bobaCoordinateLatitude, bobaCoordinateLongitude,
+                bobaAddress, bobaCity, bobaZipCode, bobaState, bobaPhone, returnBobaStopMenu(bobaName))
 
             bobaData.add(oneBobaStop)
         }
     }
 }
 
-data class BobaStop(
-    val id: String, val name: String, val rating: String, val coordinatesLatitude: String,
-    val coordinatesLongitude: String, val address: String, val city: String, val zipCode: String,
-    val state: String, val phone: String
-)
+//data class BobaStop (val id: String, val name: String, val rating: String, val coordinatesLatitude: String,
+//                 val coordinatesLongitude: String, val address: String, val city: String, val zipCode: String,
+//                 val state: String, val phone: String)
 
-data class BobaMenu(val name: String, val selfServe: Boolean, val food: Boolean, val drinkMenu: ArrayList<Drink>)
+data class BobaMenu (val name: String, val selfServe: Boolean, val food: Boolean, val drinkMenu: ArrayList<Drink>)
 
-data class Drink(
-    val category: String, val name: String, val reccommended: Boolean, val hot: Boolean,
-    val nonCaffeinated: Boolean
-)
+data class Drink (val category: String, val name: String, val reccommended: Boolean, val hot: Boolean,
+                  val nonCaffeinated: Boolean)

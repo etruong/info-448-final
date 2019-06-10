@@ -15,18 +15,7 @@ import android.os.Bundle
 
 class ShakeService : Service(), SensorEventListener {
 
-    private fun sendMessageToActivity() {
-        val intent = Intent("intentKey")
-        val extras = Bundle()
-        extras.putString("key", "hello")
-        intent.putExtras(extras)
-        this.sendBroadcast(intent)
-    }
-
-    override fun onBind(intent: Intent?): IBinder? {
-
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onBind(intent: Intent?): IBinder? { return null }
 
     var xAccel: Float = 0.0F
     var yAccel: Float = 0.0F
@@ -52,9 +41,7 @@ class ShakeService : Service(), SensorEventListener {
         sensorManager.registerListener(this, accelerator, SensorManager.SENSOR_DELAY_NORMAL)
     }
 
-    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-
-    }
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
 
     override fun onSensorChanged(event: SensorEvent?) {
 
@@ -89,7 +76,14 @@ class ShakeService : Service(), SensorEventListener {
     private fun executeShakeAction() {
         Log.v("service", "executing shake action")
         sendMessageToActivity()
-//        this.stopSelf()
+    }
+
+    private fun sendMessageToActivity() {
+        val intent = Intent("intentKey")
+        val extras = Bundle()
+        extras.putString("key", "hello")
+        intent.putExtras(extras)
+        this.sendBroadcast(intent)
     }
 
     private fun updateAccelParameter(xNewAccel: Float, yNewAccel: Float, zNewAccel: Float) {

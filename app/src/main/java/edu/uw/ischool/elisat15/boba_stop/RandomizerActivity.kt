@@ -28,8 +28,12 @@ class RandomizerActivity : AppCompatActivity() {
 
 //        BobaDataManager.instance.dataManager.fetchBobaMenuData(this)
 
+        val bundle = Bundle()
+        bundle.putString("bobaStop", intent.getStringExtra("bobaStop"))
+
         val fragmentTransaction = fragmentManager.beginTransaction()
         val fragment = BobaDeciderHome()
+        fragment.arguments = bundle
         fragmentTransaction.replace(R.id.fragment_container, fragment)
         fragmentTransaction.commit()
     }
@@ -53,7 +57,6 @@ class RandomizerActivity : AppCompatActivity() {
                 val fragmentTransaction = fragmentManager.beginTransaction()
                 val fragment = BobaDeciderResultFragment()
                 fragmentTransaction.replace(R.id.fragment_container, fragment)
-                fragmentTransaction.addToBackStack(null)
                 fragmentTransaction.commit()
             }
         }

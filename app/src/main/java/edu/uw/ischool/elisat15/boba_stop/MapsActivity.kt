@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.widget.Button
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -21,12 +22,17 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener
+
+
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
+    private val TAG: String = "MapsActivity"
     private lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var lastLocation: Location
+    private var markerNameDictionary: ArrayList<String> = arrayListOf()
 
     companion object {
         private const val REQUEST_ACCESS_LOCATION = 1
@@ -70,15 +76,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // add all the stores to the map
         val stores = BobaDataManager.instance.dataManager.bobaData
+        var index = 0
         for (store in stores) {
             val lat = store.coordinatesLatitude.toDouble()
             val long = store.coordinatesLongitude.toDouble()
             val title = store.name
-            val marker = map.addMarker(MarkerOptions().position(LatLng(lat, long)).title(title))
+            val marker = map.addMarker(MarkerOptions()
+                .position(LatLng(lat, long))
+                .title(title))
+            marker.tag = store.id
 
-            // having trouble here... idk how to get it to the boba overview page?
-            map.setOnInfoWindowClickListener { marker
+            // having trouble here... idk how to get it to the boba overview page
+            map.setOnInfoWindowClickListener {
                 val intent = Intent(this, BobaActivity::class.java)
+                BobaDataManager.instance.dataManager.currentBobaStop = it.tag as String
                 intent.putExtra("bobaStop", BobaDataManager.instance.dataManager.currentBobaStop)
                 startActivity(intent)
             }
@@ -93,4 +104,5 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
     }
+
 }

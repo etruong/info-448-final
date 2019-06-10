@@ -22,7 +22,8 @@ class BobaDeciderHome : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val companyHeader = getView()!!.findViewById<TextView>(R.id.company_header)
-        companyHeader.text =  BobaDataManager.instance.dataManager.currentBobaStop
+        companyHeader.text =  BobaDataManager.instance.dataManager
+            .returnBobaStop(arguments!!.getString("bobaStop"))!!.name
     }
 
     override fun onCreateView(
