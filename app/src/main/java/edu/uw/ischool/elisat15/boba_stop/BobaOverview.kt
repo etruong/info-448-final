@@ -75,8 +75,8 @@ class BobaOverview : Fragment() {
         }
 
         shareBtn.setOnClickListener {
-            val bobaName = BobaDataManager.instance.dataManager.currentBobaStop
-            val addy = BobaDataManager.instance.dataManager.returnBobaStop(bobaName)!!.address
+            val bobaName = BobaDataManager.instance.dataManager.returnCurrentBobaStop()!!.name
+            val addy = BobaDataManager.instance.dataManager.returnCurrentBobaStop()!!.address
             val name = bobaName.replace(" ", "%20")
             val shareAddy = addy.replace(" ", "%20")
             val shareLink = "https://www.yelp.com/search?find_desc={bobaStop}&find_loc={addy}".replace(
