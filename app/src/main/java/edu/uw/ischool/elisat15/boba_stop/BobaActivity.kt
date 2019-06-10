@@ -17,45 +17,32 @@ class BobaActivity : AppCompatActivity() {
 
     val TAG: String = "BobaActivity"
     val fragmentManager = supportFragmentManager
-    private lateinit var broadcastReceiver: BroadcastReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_boba)
 
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        val fragment = BobaOverview()
-        fragmentTransaction.replace(R.id.boba_activity_id, fragment)
-        fragmentTransaction.commit()
-
+        generateHomeBobaActivity(false)
     }
 
-//
-//    private fun registerReceiver() {
-//        Log.v(TAG, "create reciever")
-//
-//        val activityContext = this
-//
-//        broadcastReceiver = object : BroadcastReceiver() {
-//            override fun onReceive(context: Context, intent: Intent) {
-//
-//                val otpCode = intent.getStringExtra("key")
-//                Log.v(TAG, otpCode)
-//
-//                val fragmentTransaction = fragmentManager.beginTransaction()
-//                val fragment = MenuFragment()
-//                fragmentTransaction.replace(R.id.boba_activity_id, fragment)
-//                fragmentTransaction.addToBackStack(null)
-//                fragmentTransaction.commit()
-//            }
-//        }
-//        registerReceiver(broadcastReceiver, IntentFilter("intentKey"))
-//    }
-//
-//    override fun onStop() {
-//        super.onStop()
-//        if (broadcastReceiver != null) {
-//            unregisterReceiver(broadcastReceiver)
-//        }
-//    }
+    override fun onNewIntent(intent: Intent) {
+        generateHomeBobaActivity(true)
+    }
+
+    private fun generateHomeBobaActivity(returnStack: Boolean) {
+
+        val chosenBobaStop = intent.getStringExtra("bobaStop")
+        BobaDataManager.instance.dataManager.currentBobaStop = chosenBobaStop
+        val bundle = Bundle()
+        bundle.putString("bobaStop", chosenBobaStop)
+
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragment = BobaOverview()
+        fragment.arguments = bundle
+        fragmentTransaction.replace(R.id.boba_activity_id, fragment)
+        if (returnStack) {
+            fragmentTransaction.addToBackStack(null)
+        }
+        fragmentTransaction.commit()
+    }
 }

@@ -32,6 +32,10 @@ class OnlineBobaRepository: BobaRepository {
 
     private lateinit var database: DatabaseReference
 
+    override fun returnCurrentBobaStop(): BobaStopInfo? {
+        return returnBobaStop(currentBobaStop)
+    }
+
     override fun fetchData(context: Context) {
         connectOnlineDatabase(context)
     }
@@ -67,10 +71,12 @@ class OnlineBobaRepository: BobaRepository {
     private fun createNotification(context: Context) {
 
         val bobaIntent = Intent(context, BobaActivity::class.java)
-        bobaIntent.putExtra("bobaStop", newBobaPlaceObject!!.name)
+        bobaIntent.putExtra("bobaStop", newBobaPlaceObject!!.id)
+        bobaIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        bobaIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         val bobaPendingIntent = PendingIntent.getActivity(context, 1, bobaIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
-        BobaDataManager.instance.dataManager.currentBobaStop = newBobaPlaceObject!!.name
+        BobaDataManager.instance.dataManager.currentBobaStop = newBobaPlaceObject!!.id
         var builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_local_cafe)
             .setContentTitle("New Boba Shop Opened!")
@@ -81,24 +87,26 @@ class OnlineBobaRepository: BobaRepository {
             .setContentIntent(bobaPendingIntent)
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(NOTIFICATION_ID, builder.build())
+
+
     }
 
-    override fun returnBobaStop(name: String): BobaStopInfo? {
+    override fun returnBobaStop(id: String): BobaStopInfo? {
         for (bobaStopIndex in 0 until bobaData.size) {
-            if (bobaData[bobaStopIndex].name == name) {
+            if (bobaData[bobaStopIndex].id == id) {
                 return bobaData[bobaStopIndex]
             }
         }
         return null
     }
 
-    override fun returnBobaStopMenu(name: String): BobaMenu? {
-        val bobaStopObject = returnBobaStop(name) ?: return null
+    override fun returnBobaStopMenu(id: String): BobaMenu? {
+        val bobaStopObject = returnBobaStop(id) ?: return null
         return bobaStopObject!!.menu
     }
 
-    override fun returnRandomBoba(name: String): Drink? {
-        val bobaMenu = returnBobaStopMenu(name) ?: return null
+    override fun returnRandomBoba(id: String): Drink? {
+        val bobaMenu = returnBobaStopMenu(id) ?: return null
         val randomIndex = Math.random().times(bobaMenu.drinkMenu.size - 1).roundToInt()
         Log.v(TAG, bobaMenu.drinkMenu.toString())
         return bobaMenu.drinkMenu[randomIndex]
@@ -108,6 +116,7 @@ class OnlineBobaRepository: BobaRepository {
 
         for (bobaStopIndex in 0 until data.size) {
             val bobaStopObject = data[bobaStopIndex] as HashMap<String, Any>
+            val bobaStopID = bobaStopObject.get("Id") as String
             val bobaStopName = bobaStopObject.get("Name") as String
             val bobaStopPhone = bobaStopObject.get("Phone").toString()
             val bobaStopAddress = bobaStopObject.get("Address") as String
@@ -118,7 +127,7 @@ class OnlineBobaRepository: BobaRepository {
             val bobaStopCoordinateLongitude = bobaStopObject.get("Coordinates_Longitude").toString()
             val bobaStopRating = bobaStopObject.get("Rating").toString()
 
-            var bobaStopInfoObject = BobaStopInfo(bobaStopName, bobaStopRating, bobaStopCoordinateLatitude,
+            var bobaStopInfoObject = BobaStopInfo(bobaStopID, bobaStopName, bobaStopRating, bobaStopCoordinateLatitude,
                 bobaStopCoordinateLongitude, bobaStopAddress, bobaStopCity, bobaStopZipCode, bobaStopState,
                 bobaStopPhone, null)
 
@@ -147,7 +156,7 @@ class OnlineBobaRepository: BobaRepository {
                 }
 
                 var bobaStopDetailObject = BobaMenu(bobaStopName, bobaStopSelfServe, bobaStopFood, arrayListDrinks)
-                bobaStopInfoObject = BobaStopInfo(bobaStopName, bobaStopRating, bobaStopCoordinateLatitude,
+                bobaStopInfoObject = BobaStopInfo(bobaStopID, bobaStopName, bobaStopRating, bobaStopCoordinateLatitude,
                     bobaStopCoordinateLongitude, bobaStopAddress, bobaStopCity, bobaStopZipCode, bobaStopState,
                     bobaStopPhone, bobaStopDetailObject)
 
@@ -166,7 +175,8 @@ class OnlineBobaRepository: BobaRepository {
 
 }
 
-data class BobaStopInfo (val name: String,
+data class BobaStopInfo (val id: String,
+                         val name: String,
                          val rating: String,
                          val coordinatesLatitude: String,
                          val coordinatesLongitude: String,

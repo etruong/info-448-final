@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_menu.*
 
 class MenuFragment : Fragment() {
@@ -17,6 +18,11 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<TextView>(R.id.boba_menu_header).text =
+            BobaDataManager.instance.dataManager.returnCurrentBobaStop()!!.name +
+                " Menu"
+
         val curStore = BobaDataManager.instance.dataManager.currentBobaStop
         Log.d("BobaMenu", curStore)
         val menu = BobaDataManager.instance.dataManager.returnBobaStopMenu(curStore)!!.drinkMenu

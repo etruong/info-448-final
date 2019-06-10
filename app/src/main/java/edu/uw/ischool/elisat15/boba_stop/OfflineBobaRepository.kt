@@ -23,11 +23,15 @@ class OfflineBobaRepository: BobaRepository {
         updateData(context)
     }
 
-    override fun returnBobaStop(name: String): BobaStopInfo? {
-        val nameLower = name.toLowerCase()
+    override fun returnCurrentBobaStop(): BobaStopInfo? {
+        return returnBobaStop(currentBobaStop)
+    }
+
+    override fun returnBobaStop(id: String): BobaStopInfo? {
+//        val nameLower = name.toLowerCase()
         for(num in 0 until bobaData.size) {
             val bobaStop = bobaData[num]
-            if (bobaStop.name.toLowerCase() == nameLower) {
+            if (bobaStop.id.toLowerCase() == id) {
                 return bobaStop
             }
         }
@@ -74,18 +78,18 @@ class OfflineBobaRepository: BobaRepository {
         }
     }
 
-    override fun returnBobaStopMenu(name: String): BobaMenu? {
-        for (index in 0 until bobaMenuData.size) {
-            val bobaMenu = bobaMenuData.get(index)
-            if (bobaMenu.name.toLowerCase() == name.toLowerCase()) {
-                return bobaMenu
-            }
-        }
-        return null
+    override fun returnBobaStopMenu(id: String): BobaMenu? {
+//        for (index in 0 until bobaMenuData.size) {
+//            val bobaMenu = bobaMenuData.get(index)
+//            if (bobaMenu.name.toLowerCase() == name.toLowerCase()) {
+//                return bobaMenu
+//            }
+//        }
+        return returnBobaStop(id)!!.menu
     }
 
-    override fun returnRandomBoba(name: String): Drink? {
-        val bobaMenu = returnBobaStopMenu(name)
+    override fun returnRandomBoba(id: String): Drink? {
+        val bobaMenu = returnBobaStopMenu(id)
         if (bobaMenu != null) {
             val bobaDrinks = bobaMenu!!.drinkMenu
             val randomIndex = Math.random().times(bobaDrinks.size - 1).roundToInt()
@@ -133,7 +137,7 @@ class OfflineBobaRepository: BobaRepository {
             val bobaState = bobaStopJSONObject.getString("State")
             val bobaPhone = bobaStopJSONObject.getString("Phone")
 
-            val oneBobaStop = BobaStopInfo(bobaName, bobaRating, bobaCoordinateLatitude, bobaCoordinateLongitude,
+            val oneBobaStop = BobaStopInfo(bobaID, bobaName, bobaRating, bobaCoordinateLatitude, bobaCoordinateLongitude,
                 bobaAddress, bobaCity, bobaZipCode, bobaState, bobaPhone, returnBobaStopMenu(bobaName))
 
             bobaData.add(oneBobaStop)
