@@ -3,6 +3,8 @@ package edu.uw.ischool.elisat15.boba_stop
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_list.*
 
@@ -13,14 +15,15 @@ class ListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list)
 
         val stores = BobaDataManager.instance.dataManager.bobaData
-        var storeNames = arrayListOf<String>()
+        val storeNames = arrayListOf<String>()
 
         for (store in stores) {
             storeNames.add(store.name)
         }
-        val adapter = StoreAdapter(storeNames)
+        val adapter = StoreAdapter(this, storeNames)
         recyclerView.adapter = adapter
         recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
         val mapButton = findViewById<Button>(R.id.mapButton)
         mapButton.setOnClickListener {

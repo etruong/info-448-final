@@ -8,7 +8,10 @@
         tools:context=".ListActivity">
     <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" tools:layout_editor_absoluteX="176dp" android:id="@+id/recyclerView"/>
+            android:layout_height="match_parent" android:id="@+id/recyclerView"
+            tools:listitem="@layout/drink_list_item"
+            android:layout_marginTop="48dp"
+    />
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -17,12 +20,12 @@
                 android:text="Map"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/mapButton"
-                android:enabled="false"/>
+                android:enabled="true"/>
         <Button
                 android:text="List"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/listButton"
-                android:enabled="true"/>
+                android:enabled="false"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
