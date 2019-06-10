@@ -46,7 +46,7 @@ class BobaOverview : Fragment() {
         }
 
         shareBtn.setOnClickListener {
-            val bobaName = BobaDataManager.instance.dataManager.currentBobaStop
+            val bobaName = BobaDataManager.instance.dataManager.currentBobaStop.capitalizeWords()
             val addy = BobaDataManager.instance.dataManager.returnBobaStop(bobaName)!!.address
             val name = bobaName.replace(" ", "%20")
             val shareAddy = addy.replace(" ", "%20")
