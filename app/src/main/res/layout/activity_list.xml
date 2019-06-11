@@ -9,7 +9,7 @@
     <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:id="@+id/recyclerView"
-            tools:listitem="@layout/drink_list_item"
+            tools:listitem="@layout/store_list_item"
             android:layout_marginTop="48dp"
     />
     <LinearLayout

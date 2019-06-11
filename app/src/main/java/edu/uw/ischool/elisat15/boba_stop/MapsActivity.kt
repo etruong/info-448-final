@@ -47,14 +47,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
-        // get buttons
-        val listButton = findViewById<Button>(R.id.listButton)
-
-        listButton.setOnClickListener {
-            val intent = Intent(this, ListActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -102,6 +94,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 val currentLatLng = LatLng(location.latitude, location.longitude)
                 map.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 14f))
             }
+        }
+
+        val listButton = findViewById<Button>(R.id.listButton)
+
+        listButton.setOnClickListener {
+            val intent = Intent(this, ListActivity::class.java)
+            intent.putExtra("currentLat", lastLocation.latitude.toString())
+            intent.putExtra("currentLng", lastLocation.longitude.toString())
+            startActivity(intent)
         }
     }
 
