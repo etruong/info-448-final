@@ -16,11 +16,13 @@ class ListActivity : AppCompatActivity() {
 
         val stores = BobaDataManager.instance.dataManager.bobaData
         val storeNames = arrayListOf<String>()
+        val storeIds = arrayListOf<String>()
 
         for (store in stores) {
             storeNames.add(store.name)
+            storeIds.add(store.id)
         }
-        val adapter = StoreAdapter(this, storeNames)
+        val adapter = StoreAdapter(this, storeNames, storeIds)
         recyclerView.adapter = adapter
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)

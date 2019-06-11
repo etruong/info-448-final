@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.drink_list_item.view.*
 /**
  * This class will generate the recycled views and load data when they come into screen using view holder pattern
  */
-class StoreAdapter(private val mContext: Context, var listOfNames: List<String>): RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
+class StoreAdapter(private val mContext: Context, var listOfNames: List<String>, var listOfIds: List<String>): RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewHolderType: Int): StoreViewHolder {
         // Creates ViewHolder to hold reference of the views
@@ -26,17 +26,16 @@ class StoreAdapter(private val mContext: Context, var listOfNames: List<String>)
 
     override fun onBindViewHolder(viewHolder: StoreViewHolder, position: Int) {
         // Sets data on view
-        viewHolder.bindView(listOfNames[position])
+        viewHolder.bindView(listOfNames[position], listOfIds[position])
     }
 
     inner class StoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindView(storeName: String) {
+        fun bindView(storeName: String, storeId: String) {
             itemView.drinkName.text = storeName
 
             itemView.setOnClickListener {
                 val intent = Intent(mContext, BobaActivity::class.java)
-                BobaDataManager.instance.dataManager.currentBobaStop = it.tag as String
-                intent.putExtra("bobaStop", BobaDataManager.instance.dataManager.currentBobaStop)
+                intent.putExtra("bobaStop", storeId)
                 mContext.startActivity(intent)
             }
         }
