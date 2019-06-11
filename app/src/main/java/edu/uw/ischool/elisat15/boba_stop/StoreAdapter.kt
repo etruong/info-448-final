@@ -6,37 +6,38 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.drink_list_item.view.*
+import kotlinx.android.synthetic.main.store_list_item.view.*
 
 /**
  * This class will generate the recycled views and load data when they come into screen using view holder pattern
  */
-class StoreAdapter(private val mContext: Context, var listOfNames: List<String>): RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
+class StoreAdapter(private val mContext: Context, var listOfStores: List<ListActivity.Store>): RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewHolderType: Int): StoreViewHolder {
         // Creates ViewHolder to hold reference of the views
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.drink_list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.store_list_item, parent, false)
         return StoreViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
         // Size of items to load
-        return listOfNames.size
+        return listOfStores.size
     }
 
     override fun onBindViewHolder(viewHolder: StoreViewHolder, position: Int) {
         // Sets data on view
-        viewHolder.bindView(listOfNames[position])
+        viewHolder.bindView(listOfStores[position].name, listOfStores[position].id, listOfStores[position].distance)
     }
 
     inner class StoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindView(storeName: String) {
-            itemView.drinkName.text = storeName
+        fun bindView(storeName: String, storeId: String, distance: Double) {
+            val miles = "$distance mi"
+            itemView.storeName.text = storeName
+            itemView.distance.text = miles
 
             itemView.setOnClickListener {
                 val intent = Intent(mContext, BobaActivity::class.java)
-                BobaDataManager.instance.dataManager.currentBobaStop = it.tag as String
-                intent.putExtra("bobaStop", BobaDataManager.instance.dataManager.currentBobaStop)
+                intent.putExtra("bobaStop", storeId)
                 mContext.startActivity(intent)
             }
         }
