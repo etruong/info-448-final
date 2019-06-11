@@ -20,6 +20,7 @@ import android.content.BroadcastReceiver
 class BobaOverview : Fragment() {
 
     val TAG: String = "BobaOverviewFragment"
+    var bobaInfo: BobaStopInfo? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,23 +30,24 @@ class BobaOverview : Fragment() {
         val shopRating = view.findViewById<TextView>(R.id.boba_rating)
         val shopFood = view.findViewById<TextView>(R.id.boba_food)
         Log.v(TAG, arguments!!.getString("bobaStop"))
-        val bobaInfo = BobaDataManager.instance.dataManager
-            .returnBobaStop(BobaDataManager.instance.dataManager.currentBobaStop)
+
+        bobaInfo = BobaDataManager.instance.dataManager
+            .returnBobaStop(arguments!!.getString("bobaStop"))
         Log.v(TAG, bobaInfo.toString())
         Log.v(TAG, BobaDataManager.instance.dataManager.bobaData.toString())
         val menuInfo = bobaInfo!!.menu
 
-        var bobaStopPhone = bobaInfo.phone
+        var bobaStopPhone = bobaInfo!!.phone
         if (bobaStopPhone.length >= 10) {
-            bobaStopPhone = bobaInfo.phone.substring(0, 1) + "-(" + bobaInfo.phone.substring(1, 4) + ")-" +
-                    bobaInfo.phone.substring(4, 7) + "-" + bobaInfo.phone.substring(7)
+            bobaStopPhone = bobaInfo!!.phone.substring(0, 1) + "-(" + bobaInfo!!.phone.substring(1, 4) + ")-" +
+                    bobaInfo!!.phone.substring(4, 7) + "-" + bobaInfo!!.phone.substring(7)
         }
-        val bobaAddress = "${bobaInfo.address} ${bobaInfo.city}, ${bobaInfo.state} ${bobaInfo.zipCode}"
+        val bobaAddress = "${bobaInfo!!.address} ${bobaInfo!!.city}, ${bobaInfo!!.state} ${bobaInfo!!.zipCode}"
 
-        shopName.text = bobaInfo.name
+        shopName.text = bobaInfo!!.name
         shopAddress.text = "Address:\n${bobaAddress}"
         shopPhone.text = "Phone Number:\n${bobaStopPhone}"
-        shopRating.text = "Rating: ${bobaInfo.rating}"
+        shopRating.text = "Rating: ${bobaInfo!!.rating}"
         if (menuInfo != null) {
             var bobaFood = "Nope"
             if (menuInfo.food) {

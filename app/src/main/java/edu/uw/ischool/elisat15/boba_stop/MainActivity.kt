@@ -39,20 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-        // checks location permission
-        val permission = ContextCompat.checkSelfPermission(this,
-            Manifest.permission.ACCESS_FINE_LOCATION)
-        if (permission != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 0)
-        } else {
-            fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
-                if (location != null) {
-                    val currentLatLng = LatLng(location.latitude, location.longitude)
-                    BobaDataManager.instance.dataManager.lastLocation = currentLatLng
-                }
-            }
-        }
-
+        getLocation()
         val decideButton = findViewById<Button>(R.id.decide_button)
         val businessInput = findViewById<EditText>(R.id.name_input)
 
@@ -68,6 +55,32 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+    }
+
+    private fun getLocation() {
+        // checks location permission
+        val permission = ContextCompat.checkSelfPermission(this,
+            Manifest.permission.ACCESS_FINE_LOCATION)
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 0)
+        } else {
+            fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
+                if (location != null) {
+                    val currentLatLng = LatLng(location.latitude, location.longitude)
+                    BobaDataManager.instance.dataManager.lastLocation = currentLatLng
+                }
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        getLocation()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        getLocation()
     }
 
     fun checkConnectivity() {

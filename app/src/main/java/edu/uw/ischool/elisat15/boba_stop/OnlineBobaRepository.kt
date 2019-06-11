@@ -52,19 +52,16 @@ class OnlineBobaRepository: BobaRepository {
     }
 
     fun connectOnlineDatabase(context: Context): BobaStopInfo? {
-
-        database = FirebaseDatabase.getInstance().reference
         createNotificationChannel(context)
+        database = FirebaseDatabase.getInstance().reference
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                Log.v(TAG, "enter on data change")
                 val data = dataSnapshot.value as ArrayList<Any>
                 reformatBobaStopData(data)
                 if (newBobaPlace) {
 
                     newBobaPlace = false
                     bobaData.add(newBobaPlaceObject!!)
-                    Log.v(TAG, "hello")
                     createNotification(context)
 
                 } else {
@@ -130,7 +127,6 @@ class OnlineBobaRepository: BobaRepository {
     override fun returnRandomBoba(id: String): Drink? {
         val bobaMenu = returnBobaStopMenu(id) ?: return null
         val randomIndex = Math.random().times(bobaMenu.drinkMenu.size - 1).roundToInt()
-        Log.v(TAG, bobaMenu.drinkMenu.toString())
         return bobaMenu.drinkMenu[randomIndex]
     }
 
@@ -155,8 +151,6 @@ class OnlineBobaRepository: BobaRepository {
 
             if (bobaStopObject.containsKey("Detail")) {
 
-                Log.v(TAG, "${bobaStopName} contains more details!!")
-
                 val bobaStopDetail = bobaStopObject.get("Detail") as HashMap<String, Any>
                 val bobaStopSelfServe = bobaStopDetail.get("Self-serve").toString().toBoolean()
                 val bobaStopFood = bobaStopDetail.get("Food").toString().toBoolean()
@@ -166,7 +160,6 @@ class OnlineBobaRepository: BobaRepository {
 
                 for (bobaStopDrinksIndex in 0 until bobaStopDrinks.size) {
                     val drinks = bobaStopDrinks[bobaStopDrinksIndex] as HashMap<String, String>
-                    Log.v(TAG, drinks.toString())
                     val drinkName = drinks["name"] as String
                     val drinkCategory = drinks["category"] as String
                     val drinkCaffeinated = drinks["non-caffeinated"].toString().toBoolean()
