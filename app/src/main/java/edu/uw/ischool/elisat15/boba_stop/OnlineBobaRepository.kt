@@ -1,6 +1,7 @@
 package edu.uw.ischool.elisat15.boba_stop
 
 import android.app.Notification.DEFAULT_SOUND
+import android.app.Notification.VISIBILITY_SECRET
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
@@ -81,7 +82,7 @@ class OnlineBobaRepository: BobaRepository {
 
         val bobaIntent = Intent(context, BobaActivity::class.java)
         bobaIntent.putExtra("bobaStop", newBobaPlaceObject!!.id)
-        val bobaPendingIntent = PendingIntent.getActivity(context, 1, bobaIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val bobaPendingIntent = PendingIntent.getActivity(context, 1, bobaIntent, PendingIntent.FLAG_CANCEL_CURRENT)
 
         BobaDataManager.instance.dataManager.currentBobaStop = newBobaPlaceObject!!.id
         var builder = NotificationCompat.Builder(context, CHANNEL_ID)
@@ -91,7 +92,9 @@ class OnlineBobaRepository: BobaRepository {
                 .bigText("Check out ${newBobaPlaceObject!!.name} it just opened up near you!"))
             .setDefaults(DEFAULT_SOUND)
             .setPriority(NotificationCompat.PRIORITY_MAX)
+            .setChannelId(CHANNEL_ID)
             .setContentIntent(bobaPendingIntent)
+            .setVisibility(VISIBILITY_SECRET)
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(NOTIFICATION_ID, builder.build())
     }

@@ -23,9 +23,11 @@ class BobaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_boba)
 
         generateHomeBobaActivity(intent,false)
+        Log.v(TAG, "Created boba activity")
     }
 
     override fun onNewIntent(intent: Intent) {
+        Log.v(TAG, "newIntent")
         generateHomeBobaActivity(intent, true)
     }
 
@@ -44,11 +46,23 @@ class BobaActivity : AppCompatActivity() {
             fragmentTransaction.addToBackStack(null)
         }
         fragmentTransaction.commit()
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.v(TAG, "onPause")
     }
 
     override fun onStart() {
         super.onStart()
+        Log.v(TAG, "onStart")
         val serviceIntent = Intent(this, ShakeService::class.java)
         this!!.stopService(serviceIntent)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.v(TAG, "onResume")
     }
 }

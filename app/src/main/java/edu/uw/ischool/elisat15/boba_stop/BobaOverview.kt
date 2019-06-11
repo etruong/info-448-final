@@ -24,17 +24,23 @@ class BobaOverview : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        Log.v(TAG, "creating fragment")
         val shopName = view.findViewById<TextView>(R.id.shopName)
         val shopPhone = view.findViewById<TextView>(R.id.boba_phone)
         val shopRating = view.findViewById<TextView>(R.id.boba_rating)
         val shopFood = view.findViewById<TextView>(R.id.boba_food)
         Log.v(TAG, arguments!!.getString("bobaStop"))
 
+        Log.v(TAG, bobaInfo.toString())
+        Log.v(TAG, "Before " + BobaDataManager.instance.dataManager.bobaData.toString())
+        if (BobaDataManager.instance.dataManager.bobaData == null) {
+            BobaDataManager.instance.dataManager.fetchData(this.activity as Context)
+            Log.v(TAG, "After Fetch " + BobaDataManager.instance.dataManager.bobaData.toString())
+        }
+
         bobaInfo = BobaDataManager.instance.dataManager
             .returnBobaStop(arguments!!.getString("bobaStop"))
-        Log.v(TAG, bobaInfo.toString())
-        Log.v(TAG, BobaDataManager.instance.dataManager.bobaData.toString())
+
         val menuInfo = bobaInfo!!.menu
 
         var bobaStopPhone = bobaInfo!!.phone
@@ -54,28 +60,29 @@ class BobaOverview : Fragment() {
                 bobaFood = "Yes!!"
             }
             shopFood.text = "Food: ${bobaFood}"
+
+            val randomizerIntent = Intent(activity, RandomizerActivity::class.java)
+            deciderBtn.setOnClickListener {
+                BobaDataManager.instance.dataManager.currentBobaStop = arguments!!.getString("bobaStop")
+                randomizerIntent.putExtra("bobaStop", arguments!!.getString("bobaStop"))
+                startActivity(randomizerIntent)
+            }
+
+            val menuBundle = Bundle()
+            menuBundle.putString("bobaStop", arguments!!.getString("bobaStop"))
+            menuBtn.setOnClickListener {
+                val newFragment = MenuFragment()
+                newFragment.arguments = menuBundle
+                val transaction = fragmentManager!!.beginTransaction().apply {
+                    replace(R.id.boba_overview_id, newFragment)
+                    addToBackStack(null)
+                }
+                transaction.commit()
+            }
+
         } else {
             menuBtn.visibility = View.GONE
             deciderBtn.visibility = View.GONE
-        }
-
-        val randomizerIntent = Intent(activity, RandomizerActivity::class.java)
-        deciderBtn.setOnClickListener {
-            BobaDataManager.instance.dataManager.currentBobaStop = arguments!!.getString("bobaStop")
-            randomizerIntent.putExtra("bobaStop", arguments!!.getString("bobaStop"))
-            startActivity(randomizerIntent)
-        }
-
-        val menuBundle = Bundle()
-        menuBundle.putString("bobaStop", arguments!!.getString("bobaStop"))
-        menuBtn.setOnClickListener {
-            val newFragment = MenuFragment()
-            newFragment.arguments = menuBundle
-            val transaction = fragmentManager!!.beginTransaction().apply {
-                replace(R.id.boba_overview_id, newFragment)
-                addToBackStack(null)
-            }
-            transaction.commit()
         }
 
         shareBtn.setOnClickListener {
