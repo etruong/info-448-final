@@ -16,9 +16,11 @@ import kotlin.math.roundToInt
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context.NOTIFICATION_SERVICE
+import android.location.Location
 import android.os.Build
 import android.provider.Settings.Global.getString
 import android.support.v4.content.ContextCompat.getSystemService
+import com.google.android.gms.maps.model.LatLng
 
 
 class OnlineBobaRepository: BobaRepository {
@@ -30,6 +32,7 @@ class OnlineBobaRepository: BobaRepository {
     override lateinit var currentLocation: String
     override lateinit var currentBobaStop: String
     override lateinit var serviceIntent: Intent
+    override var lastLocation: LatLng? = null
 
     // variables about new boba shop notification
     var firstInitalized: Boolean = false

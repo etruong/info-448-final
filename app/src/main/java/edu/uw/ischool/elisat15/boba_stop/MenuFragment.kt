@@ -25,7 +25,7 @@ class MenuFragment : Fragment() {
 
         val curStore = BobaDataManager.instance.dataManager.currentBobaStop
         Log.d("BobaMenu", curStore)
-        val menu = BobaDataManager.instance.dataManager.returnBobaStopMenu(curStore)!!.drinkMenu
+        val menu = BobaDataManager.instance.dataManager.returnBobaStop(curStore)!!.menu!!.drinkMenu
         Log.d("BobaMenu", menu.toString())
         var menuItems = arrayListOf<String>()
 

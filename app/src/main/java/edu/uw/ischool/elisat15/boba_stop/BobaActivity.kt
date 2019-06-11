@@ -32,7 +32,6 @@ class BobaActivity : AppCompatActivity() {
     private fun generateHomeBobaActivity(thisIntent: Intent, returnStack: Boolean) {
 
         val chosenBobaStop = thisIntent.getStringExtra("bobaStop")
-        Log.v(TAG, chosenBobaStop)
         BobaDataManager.instance.dataManager.currentBobaStop = chosenBobaStop
         val bundle = Bundle()
         bundle.putString("bobaStop", chosenBobaStop)

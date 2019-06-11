@@ -29,10 +29,10 @@ class BobaOverview : Fragment() {
         val shopRating = view.findViewById<TextView>(R.id.boba_rating)
         val shopFood = view.findViewById<TextView>(R.id.boba_food)
         Log.v(TAG, arguments!!.getString("bobaStop"))
-        Log.v(TAG, )
         val bobaInfo = BobaDataManager.instance.dataManager
-            .returnBobaStop(arguments!!.getString("bobaStop"))
+            .returnBobaStop(BobaDataManager.instance.dataManager.currentBobaStop)
         Log.v(TAG, bobaInfo.toString())
+        Log.v(TAG, BobaDataManager.instance.dataManager.bobaData.toString())
         val menuInfo = bobaInfo!!.menu
 
         var bobaStopPhone = bobaInfo.phone

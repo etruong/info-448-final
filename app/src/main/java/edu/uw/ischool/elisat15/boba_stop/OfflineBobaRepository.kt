@@ -2,7 +2,9 @@ package edu.uw.ischool.elisat15.boba_stop
 
 import android.content.Context
 import android.content.Intent
+import android.location.Location
 import android.util.Log
+import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.json.JSONArray
@@ -20,8 +22,10 @@ class OfflineBobaRepository: BobaRepository {
     override lateinit var currentBobaStop: String
     override lateinit var serviceIntent: Intent
     override var online: Boolean = false
+    override var lastLocation: LatLng? = null
 
     override fun fetchData(context: Context) {
+        fetchBobaMenuData(context)
         updateData(context)
     }
 
@@ -30,10 +34,10 @@ class OfflineBobaRepository: BobaRepository {
     }
 
     override fun returnBobaStop(id: String): BobaStopInfo? {
-//        val nameLower = name.toLowerCase()
         for(num in 0 until bobaData.size) {
             val bobaStop = bobaData[num]
-            if (bobaStop.id.toLowerCase() == id) {
+            Log.v(TAG, bobaStop.toString())
+            if (bobaStop.id == id) {
                 return bobaStop
             }
         }
@@ -81,17 +85,17 @@ class OfflineBobaRepository: BobaRepository {
     }
 
     override fun returnBobaStopMenu(id: String): BobaMenu? {
-//        for (index in 0 until bobaMenuData.size) {
-//            val bobaMenu = bobaMenuData.get(index)
-//            if (bobaMenu.name.toLowerCase() == name.toLowerCase()) {
-//                return bobaMenu
-//            }
-//        }
-        return returnBobaStop(id)!!.menu
+        for (index in 0 until bobaMenuData.size) {
+            val bobaMenu = bobaMenuData.get(index)
+            if (bobaMenu.name.toLowerCase() == id.toLowerCase()) {
+                return bobaMenu
+            }
+        }
+        return null
     }
 
     override fun returnRandomBoba(id: String): Drink? {
-        val bobaMenu = returnBobaStopMenu(id)
+        val bobaMenu = returnBobaStop(id)!!.menu
         if (bobaMenu != null) {
             val bobaDrinks = bobaMenu!!.drinkMenu
             val randomIndex = Math.random().times(bobaDrinks.size - 1).roundToInt()

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="80dp"
+              android:padding="30dp">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_local_cafe_grey"
+            tools:layout_editor_absoluteY="16dp" tools:layout_editor_absoluteX="16dp" android:id="@+id/imageView3"/>
+    <TextView
+            android:text="Store Name"
+            android:paddingLeft="10dp"
+            android:layout_width="256dp"
+            android:layout_height="35dp" tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="65dp" android:id="@+id/storeName" android:textSize="18sp"/>
+    <TextView
+            android:text="Distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="326dp" android:id="@+id/distance" android:textSize="18sp"/>
+</LinearLayout>
