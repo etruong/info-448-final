@@ -31,7 +31,6 @@ class BobaOverview : Fragment() {
         val shopFood = view.findViewById<TextView>(R.id.boba_food)
         Log.v(TAG, arguments!!.getString("bobaStop"))
 
-        Log.v(TAG, bobaInfo.toString())
         Log.v(TAG, "Before " + BobaDataManager.instance.dataManager.bobaData.toString())
         if (BobaDataManager.instance.dataManager.bobaData == null) {
             BobaDataManager.instance.dataManager.fetchData(this.activity as Context)
@@ -40,7 +39,7 @@ class BobaOverview : Fragment() {
 
         bobaInfo = BobaDataManager.instance.dataManager
             .returnBobaStop(arguments!!.getString("bobaStop"))
-
+        Log.v(TAG, bobaInfo.toString())
         val menuInfo = bobaInfo!!.menu
 
         var bobaStopPhone = bobaInfo!!.phone

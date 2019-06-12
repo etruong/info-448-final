@@ -30,7 +30,7 @@ class MenuFragment : Fragment() {
         var menuItems = arrayListOf<String>()
 
         for (drink in menu) {
-            menuItems.add(drink.name)
+            menuItems.add(drink.name + "\n[${drink.category}]")
         }
 
         val adapter = DrinkAdapter(menuItems)

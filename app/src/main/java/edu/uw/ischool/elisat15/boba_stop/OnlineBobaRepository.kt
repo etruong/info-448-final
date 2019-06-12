@@ -80,9 +80,11 @@ class OnlineBobaRepository: BobaRepository {
 
     private fun createNotification(context: Context) {
 
-        val bobaIntent = Intent(context, BobaActivity::class.java)
+        val bobaIntent = Intent(context, BobaActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
         bobaIntent.putExtra("bobaStop", newBobaPlaceObject!!.id)
-        val bobaPendingIntent = PendingIntent.getActivity(context, 1, bobaIntent, PendingIntent.FLAG_CANCEL_CURRENT)
+        val bobaPendingIntent = PendingIntent.getActivity(context, 1, bobaIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
         BobaDataManager.instance.dataManager.currentBobaStop = newBobaPlaceObject!!.id
         var builder = NotificationCompat.Builder(context, CHANNEL_ID)
@@ -95,6 +97,7 @@ class OnlineBobaRepository: BobaRepository {
             .setChannelId(CHANNEL_ID)
             .setContentIntent(bobaPendingIntent)
             .setVisibility(VISIBILITY_SECRET)
+
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(NOTIFICATION_ID, builder.build())
     }

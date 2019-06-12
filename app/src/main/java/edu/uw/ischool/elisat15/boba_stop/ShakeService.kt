@@ -27,7 +27,7 @@ class ShakeService : Service(), SensorEventListener {
 
     var firstUpdate: Boolean = true
     var shakeInitiated: Boolean = false
-    var shakeThreshold: Float = 4.5F // difference btwn acceleration
+    var shakeThreshold: Float = 2.5F // difference btwn acceleration
 
     lateinit var sensorManager: SensorManager
     lateinit var accelerator: Sensor
